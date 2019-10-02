@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Dictionaries - Devkit q&kdb+</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Dictionaries";
+    var mkdocs_page_input_path = "Dictionaries.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Devkit q&kdb+</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../overview/">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../install/">Installing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data_type/">Data type</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../type_casting/">Type casting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../list_synctax/">List synctax</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../list/">List</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Dictionaries</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#lookup">Lookup</a></li>
+    
+
+    <li class="toctree-l2"><a href="#operations-on-dictionaries">Operations on Dictionaries</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#modified">modified</a></li>
+        
+            <li><a class="toctree-l3" href="#extended">extended</a></li>
+        
+            <li><a class="toctree-l3" href="#reverse-lookup">Reverse Lookup</a></li>
+        
+            <li><a class="toctree-l3" href="#removing">Removing</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#column-dictionaries">Column Dictionaries</a></li>
+    
+
+    <li class="toctree-l2"><a href="#flipping-a-dictionary">Flipping a Dictionary</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Devkit q&kdb+</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Dictionaries</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Dictionaries are an extension of lists which provide the foundation for creating tables. In mathematical terms, dictionary creates the</p>
+<p>“domain → Range”</p>
+<p>or in general (short) creates</p>
+<p>“key → value”</p>
+<p>relationship between elements.</p>
+<p>A dictionary is an ordered collection of key-value pairs that is roughly equivalent to a hash table. A dictionary is a mapping defined by an explicit I/O association between a domain list and a range list via positional correspondence. The creation of a dictionary uses the "xkey" primitive (!)</p>
+<pre><code class="q">ListOfDomain ! ListOfRange
+</code></pre>
+
+<pre><code class="q">q)d:`Name`Age`Sex`Weight!(`John;36;&quot;M&quot;;60.3)   / Create a dictionary d
+
+q)d
+
+Name   | `John
+Age    | 36
+Sex    | &quot;M&quot;
+Weight | 60.3
+
+q)count d             / To get the number of rows in a dictionary.
+4
+
+q)key d               / The function key returns the domain
+`Name`Age`Sex`Weight
+
+q)value d             / The function value returns the range.
+
+`John
+36
+
+&quot;M&quot;
+60.3
+
+q)cols d             / The function cols also returns the domain.
+`Name`Age`Sex`Weight
+</code></pre>
+
+<h1 id="lookup">Lookup</h1>
+<pre><code class="q">q)d[`Name]       / Accessing the value of domain `Name
+`John
+
+q)d[`Name`Sex]   / extended item-wise to a simple list of keys
+`John
+&quot;M&quot;
+</code></pre>
+
+<h1 id="operations-on-dictionaries">Operations on Dictionaries</h1>
+<h2 id="modified">modified</h2>
+<pre><code class="q">d:`Name`Age`Sex`Weight! (`John;36;&quot;M&quot;;60.3)
+                                  / A dictionary d
+
+q)d[`Age]:35                      / Assigning new value to key Age
+
+q)d 
+                              / New value assigned to key Age in d
+Name   | `John
+Age    | 35
+Sex    | &quot;M&quot;
+Weight | 60.3
+</code></pre>
+
+<h2 id="extended">extended</h2>
+<pre><code class="q">q)d[`Height]:&quot;182 Ft&quot;
+
+q)d
+
+Name   | `John
+Age    | 35
+Sex    | &quot;M&quot;
+Weight | 60.3
+Height | &quot;182 Ft&quot;
+</code></pre>
+
+<h2 id="reverse-lookup">Reverse Lookup</h2>
+<pre><code class="q">q)d2:`x`y`z!99 88 77
+
+q)d2?77
+`z
+</code></pre>
+
+<h2 id="removing">Removing</h2>
+<pre><code class="q">q)d2:`x`y`z!99 88 77
+
+q)d2    _`z
+
+x| 99
+y| 88
+</code></pre>
+
+<h1 id="column-dictionaries">Column Dictionaries</h1>
+<pre><code class="q">q)scores: `name`id!(`John`Jenny`Jonathan;9 18 27)
+                              / Dictionary scores
+
+q)scores[`name]               / The values for the name column are
+`John`Jenny`Jonathan
+
+q)scores.name                 / Retrieving the values for a column in a
+                              / column dictionary using dot notation.
+`John`Jenny`Jonathan
+
+q)scores[`name][1]            / Values in row 1 of the name column
+`Jenny
+
+q)scores[`id][2]              / Values in row 2 of the id column is
+27
+</code></pre>
+
+<h1 id="flipping-a-dictionary">Flipping a Dictionary</h1>
+<p>The net effect of flipping a column dictionary is simply reversing the order of the indices. This is logically equivalent to transposing the rows and columns.</p>
+<pre><code class="q">q)scores
+
+name  | John Jenny Jonathan
+id    | 9   18   27
+
+q)flip scores
+
+  name     id
+---------------
+  John     9
+  Jenny    18
+Jonathan  27
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../list/" class="btn btn-neutral" title="List"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../list/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../js/extra.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

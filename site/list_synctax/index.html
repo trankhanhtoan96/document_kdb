@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>List synctax - Devkit q&kdb+</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "List synctax";
+    var mkdocs_page_input_path = "list_synctax.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Devkit q&kdb+</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../overview/">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../install/">Installing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data_type/">Data type</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../type_casting/">Type casting</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">List synctax</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#example-1-atom-and-list-formation">Example 1 – Atom and List Formation</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../list/">List</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dictionaries/">Dictionaries</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Devkit q&kdb+</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>List synctax</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="example-1-atom-and-list-formation">Example 1 – Atom and List Formation</h1>
+<pre><code class="q">/ Note that the comments begin with a slash “ / ” and cause the parser
+/ to ignore everything up to the end of the line.
+
+x: `mohan              / `mohan is a symbol, assigned to a variable x
+type x                 / let’s check the type of x
+-11h                   / -ve sign, because it’s single element.
+
+y: (`abc;`bca;`cab)    / list of three symbols, y is the variable name.
+
+type y
+11h                    / +ve sign, as it contain list of atoms (symbol).
+
+y1: (`abc`bca`cab)     / another way of writing y, please note NO semicolon
+
+y2: (`$&quot;symbols may have interior blanks&quot;)   / string to symbol conversion
+y[0]                   / return `abc
+y 0                    / same as y[0], also returns `abc
+y 0 2                  / returns `abc`cab, same as does y[0 2]
+
+z: (`abc; 10 20 30; (`a`b); 9.9 8.8 7.7)      / List of different types,
+z 2 0                  / returns (`a`b; `abc),
+z[2;0]                 / return `a. first element of z[2]
+
+x: &quot;Hello World!&quot;     / list of character, a string
+x 4 0                  / returns “oH” i.e. 4th and 0th(first)
+element
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../list/" class="btn btn-neutral float-right" title="List">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../type_casting/" class="btn btn-neutral" title="Type casting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../type_casting/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../list/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../js/extra.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

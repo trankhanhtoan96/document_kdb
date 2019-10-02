@@ -1,0 +1,15 @@
+site_name: Devkit q&kdb+
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Installing: install.md
+  - Data type: data_type.md
+  - Type casting: type_casting.md
+  - List synctax: list_synctax.md
+  - List: list.md
+  - Dictionaries: Dictionaries.md
+theme: readthedocs
+extra_javascript:
+  - js/extra.js
+extra_css:
+  - css/extra.css

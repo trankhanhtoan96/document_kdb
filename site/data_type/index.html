@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Data type - Devkit q&kdb+</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data type";
+    var mkdocs_page_input_path = "data_type.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Devkit q&kdb+</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../overview/">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../install/">Installing</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Data type</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#data-type">Data Type</a></li>
+    
+
+    <li class="toctree-l2"><a href="#date">Date</a></li>
+    
+
+    <li class="toctree-l2"><a href="#time">Time</a></li>
+    
+
+    <li class="toctree-l2"><a href="#datetimes">Datetimes</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../type_casting/">Type casting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../list_synctax/">List synctax</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../list/">List</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dictionaries/">Dictionaries</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Devkit q&kdb+</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Data type</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="data-type">Data Type</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>1b</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>0xff</td>
+</tr>
+<tr>
+<td>short</td>
+<td>23h</td>
+</tr>
+<tr>
+<td>int</td>
+<td>23i</td>
+</tr>
+<tr>
+<td>long</td>
+<td>23j</td>
+</tr>
+<tr>
+<td>real</td>
+<td>2.3e</td>
+</tr>
+<tr>
+<td>float</td>
+<td>2.3f</td>
+</tr>
+<tr>
+<td>char</td>
+<td>“a”</td>
+</tr>
+<tr>
+<td>varchar</td>
+<td>`ab</td>
+</tr>
+<tr>
+<td>month</td>
+<td>2003.03m</td>
+</tr>
+<tr>
+<td>date</td>
+<td>2015.03.17T18:01:40.134</td>
+</tr>
+<tr>
+<td>minute</td>
+<td>08:31</td>
+</tr>
+<tr>
+<td>second</td>
+<td>08:31:53</td>
+</tr>
+<tr>
+<td>time</td>
+<td>18:03:18.521</td>
+</tr>
+<tr>
+<td>enum</td>
+<td><code>u$</code>b, where u:<code>a</code>b</td>
+</tr>
+</tbody>
+</table>
+<h1 id="date">Date</h1>
+<pre><code class="q">q)x:2015.01.22      / This is how we write 22nd Jan 2015
+
+q)`int$x            / Number of days since 2000.01.01
+5500i
+
+q)x.year            / Another way of extracting year
+2015i
+
+q)x.mm              / Another way of extracting month
+1i
+
+q)x.dd              / Another way of extracting day
+22i
+
+q)x+1        / Add one day
+2015.01.23
+
+q)x-7        / Subtract 7 days
+2015.01.1
+</code></pre>
+
+<h1 id="time">Time</h1>
+<pre><code class="q">q)tt1: 03:30:00.000     / tt1 store the time
+
+q)tt1
+03:30:00.000
+
+q)`int$tt1              / Number of milliseconds
+12600000i
+
+q)tt1.hh
+3i
+
+q)tt1.mm
+30i
+
+q)tt1.ss
+0i
+</code></pre>
+
+<h1 id="datetimes">Datetimes</h1>
+<pre><code class="q">q)dt:2012.12.20T04:54:59:000      / 04:54.59 AM on 20thDec2012
+q)`float$dt
+4737.205
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../type_casting/" class="btn btn-neutral float-right" title="Type casting">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install/" class="btn btn-neutral" title="Installing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../type_casting/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../js/extra.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
