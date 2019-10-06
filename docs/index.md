@@ -12,3 +12,4 @@ a single solution for real-time data with analytics. Kdb+ stores database as ord
 # Where
 As the volume of data is increasing day by day, we need a system that can handle huge volumes of data. KDB+ fulfills this requirement. KDB+ not only stores an enormous amount of data but also analyzes it in real time.
 
+https://www.youtube.com/playlist?list=PLypX5sYuDqvrwBD2EMWadIMiTqJZmVsqm
