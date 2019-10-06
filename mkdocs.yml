@@ -10,6 +10,8 @@ nav:
   - Table: table.md
   - Verb: verb.md
   - Function: function.md
+  - Queries: queries.md
+  - Queries: queries.md
 theme: readthedocs
 extra_javascript:
   - js/extra.js
