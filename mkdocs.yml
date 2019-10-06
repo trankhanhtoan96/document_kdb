@@ -1,7 +1,6 @@
 site_name: Devkit q&kdb+
 nav:
-  - Home: index.md
-  - Overview: overview.md
+  - Overview: index.md
   - Installing: install.md
   - Data type: data_type.md
   - Type casting: type_casting.md
@@ -9,6 +8,8 @@ nav:
   - List: list.md
   - Dictionaries: Dictionaries.md
   - Table: table.md
+  - Verb: verb.md
+  - Function: function.md
 theme: readthedocs
 extra_javascript:
   - js/extra.js
