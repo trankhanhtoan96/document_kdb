@@ -53,7 +53,7 @@ q)d[`Name`Sex]   / extended item-wise to a simple list of keys
 ```
 
 # Operations on Dictionaries
-## modified
+# modified
 ```q
 d:`Name`Age`Sex`Weight! (`John;36;"M";60.3)
                                   / A dictionary d
@@ -67,7 +67,7 @@ Age    | 35
 Sex    | "M"
 Weight | 60.3
 ```
-## extended
+# extended
 ```q
 q)d[`Height]:"182 Ft"
 
@@ -79,14 +79,14 @@ Sex    | "M"
 Weight | 60.3
 Height | "182 Ft"
 ```
-## Reverse Lookup
+# Reverse Lookup
 ```q
 q)d2:`x`y`z!99 88 77
 
 q)d2?77
 `z
 ```
-## Removing
+# Removing
 ```q
 q)d2:`x`y`z!99 88 77
 

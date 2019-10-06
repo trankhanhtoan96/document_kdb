@@ -8,6 +8,7 @@ nav:
   - List synctax: list_synctax.md
   - List: list.md
   - Dictionaries: Dictionaries.md
+  - Table: table.md
 theme: readthedocs
 extra_javascript:
   - js/extra.js

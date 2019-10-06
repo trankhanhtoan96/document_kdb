@@ -14,7 +14,7 @@ q)chars:("h";"e";"l";"l";"o";" ";"w";"o";"r";"l";"d")
 "hello world"
 ```
 # indexing of list
-## Index Notation
+# Index Notation
 ```q
 q)L:(99;98.7e;`b;`abc;"z")
 
@@ -28,7 +28,7 @@ q)L[4]
 "z"
 ```
 
-## Indexed Assignment
+# Indexed Assignment
 ```q
 q)L1:9 8 7
 
