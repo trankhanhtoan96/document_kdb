@@ -10,4 +10,10 @@ $(document).ready(function () {
     $('.current').closest('.toctree-l1').find('.caption-text').next().show();
     $('footer').remove();
     $('.wy-nav-content').css('max-width','none');
+    $('.toctree-l1>a').each(function(){
+        $(this).text("+ "+$(this).text());
+    });
+    $('.subnav>li>a').each(function(){
+        $(this).text("- "+$(this).text());
+    });
 });
