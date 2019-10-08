@@ -1,3 +1,11 @@
+# create custom function
+
+```q
+q) functionname:{[arg1;arg2] res:arg1+arg2; res /res is the responsive of the function}
+q) functionname[3;4]
+7
+```
+
 # abs
 ```q
 q)abs -9.9
