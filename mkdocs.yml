@@ -10,9 +10,7 @@ nav:
   - Table: table.md
   - Verb: verb.md
   - Function: function.md
-  - Queries: queries.md
   - Inter Process Communicatio: inter_process-communicatio.md
-  - Message Handler: message_handler.md
   - Table on disk: table_on_disk.md
 theme: readthedocs
 extra_javascript:
